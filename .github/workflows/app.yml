@@ -21,13 +21,4 @@ jobs:
         project_id: ${{ secrets.GCP_PROJECT_ID }}
       
     - name: configure Docker
-      run: gcloud auth configure-docker --quiet
-
-    - name: build image
-      run: docker build -t gcr.io/${{ secrets.GCP_PROJECT_ID }}/estudo_cloud_run_ci .
-
-    - name: push image
-      run: docker push gcr.io/${{ secrets.GCP_PROJECT_ID }}/estudo_cloud_run_ci
-
-    - name: deploy
-      run: gcloud run deploy estudo-cloud-run_ci --image gcr.io/${{ secrets.GCP_PROJECT_ID }}/estudo_cloud_run_ci
+      run: gcloud info
