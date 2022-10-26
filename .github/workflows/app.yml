@@ -30,4 +30,4 @@ jobs:
       run: docker push gcr.io/${{ secrets.GCP_PROJECT_ID }}/estudo_cloud_run_ci
 
     - name: deploy
-      run: gcloud run deploy estudo-cloud-run --image gcr.io/${{ secrets.GCP_PROJECT_ID }}/estudo_cloud_run_ci
+      run: gcloud run deploy estudo-cloud-run_ci --image gcr.io/${{ secrets.GCP_PROJECT_ID }}/estudo_cloud_run_ci
